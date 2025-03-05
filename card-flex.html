@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Card</title>
+    <style>
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        width: 275px;
+        border: 1px solid black;
+        box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.5);
+        margin: 0 0.5em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%;
+      }
+
+      .card-content {
+        padding: 1em;
+        flex-grow: 1;
+        /* è un flex-item, ma ora diventa ANCHE un flex-container! */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-content h3 {
+        margin-top: 0;
+      }
+
+      .card-content p {
+        flex-grow: 1;
+      }
+
+      .card-content button {
+        width: 100%;
+        background-color: gray;
+        color: white;
+        padding: 0.25em 0;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="cards">
+        <article class="card">
+          <img src="https://placecats.com/400/400" alt="kitten" />
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+              ipsum quisquam?
+            </p>
+            <button>Go To Page</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://placecats.com/400/400" alt="kitten" />
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+              ipsum quisquam? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Neque, ipsum quisquam? Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Neque, ipsum quisquam?
+            </p>
+            <button>Go To Page</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://placecats.com/400/400" alt="kitten" />
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+              ipsum quisquam? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Neque, ipsum quisquam? Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Neque, ipsum quisquam? amet,
+              consectetur adipisicing elit. Neque, ipsum quisquam? amet,
+              consectetur adipisicing elit. Neque, ipsum quisquam?
+            </p>
+            <button>Go To Page</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
